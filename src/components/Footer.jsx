@@ -5,18 +5,19 @@ const Footer = () => {
     return (
         <motion.footer
             id="contact-section"
-            className="w-full bg-[#1D1D1D] text-white py-16 px-8 md:px-20 font-inter"
+            className="w-full bg-[#1D1D1D] text-white py-12 px-4 sm:px-6 md:py-16 md:px-20 font-inter"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
         >
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-8">
-                <div className="flex flex-col mb-8 md:mb-0">
-                    <h2 className="text-3xl font-bold text-white mb-2">SculptDerma</h2>
-                    <p className="text-sm text-gray-400">FACE · BODY · SKIN</p>
+            {/* Top Section */}
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-center border-b border-gray-700 pb-6 md:pb-8 text-center md:text-left">
+                <div className="flex flex-col mb-6 md:mb-0">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">SculptDerma</h2>
+                    <p className="text-xs sm:text-sm text-gray-400">FACE · BODY · SKIN</p>
                 </div>
-                <div className="flex space-x-4 text-2xl text-gray-400">
+                <div className="flex space-x-3 sm:space-x-4 text-lg sm:text-2xl text-gray-400">
                     <a href="#" aria-label="Facebook" className="hover:text-emerald-400 transition-colors">
                         <i className="fab fa-facebook-f"></i>
                     </a>
@@ -31,10 +32,13 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-between pt-8 space-y-8 md:space-y-0">
-                <div className="md:w-1/4">
-                    <h3 className="text-xl font-semibold mb-4 text-white">Services</h3>
-                    <ul className="space-y-2 text-gray-400">
+
+            {/* Middle Section */}
+            <div className="flex flex-col md:flex-row justify-between pt-8 gap-8 md:gap-0 text-center md:text-left">
+                {/* Services */}
+                <div className="md:w-1/4 w-full">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Services</h3>
+                    <ul className="space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">Plastic and Aesthetic Surgery</a></li>
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">Dermatology</a></li>
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">Cosmetology</a></li>
@@ -50,31 +54,41 @@ const Footer = () => {
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">For Women</a></li>
                     </ul>
                 </div>
-                <div className="md:w-1/4">
-                    <h3 className="text-xl font-semibold mb-4 text-white">Contact Us</h3>
-                    <p className="text-gray-400 mb-2">Email: <a href="mailto:info@sculptderma.com" className="text-white hover:text-emerald-400 transition-colors">info@sculptderma.com</a></p>
-                    <p className="text-gray-400 mb-2">Phone: <a href="tel:+918983628436" className="text-white hover:text-emerald-400 transition-colors">+91 89836 28436</a></p>
-                    <p className="text-sm text-gray-500">(Whatsapp messages only)</p>
-                    <h3 className="text-xl font-semibold mt-6 mb-2 text-white">Quick Links</h3>
-                    <ul className="space-y-2 text-gray-400">
+
+                {/* Contact */}
+                <div className="md:w-1/4 w-full">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Contact Us</h3>
+                    <p className="text-gray-400 mb-2 text-sm sm:text-base">
+                        Email: <a href="mailto:info@sculptderma.com" className="text-white hover:text-emerald-400 transition-colors">info@sculptderma.com</a>
+                    </p>
+                    <p className="text-gray-400 mb-2 text-sm sm:text-base">
+                        Phone: <a href="tel:+918983628436" className="text-white hover:text-emerald-400 transition-colors">+91 89836 28436</a>
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-500">(Whatsapp messages only)</p>
+                    <h3 className="text-lg sm:text-xl font-semibold mt-5 sm:mt-6 mb-2 text-white">Quick Links</h3>
+                    <ul className="space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">Terms and Conditions</a></li>
                         <li><a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div className="md:w-1/4">
-                    <h3 className="text-xl font-semibold mb-4 text-white">Locations</h3>
-                    <p className="text-sm text-gray-400 mb-4">
+
+                {/* Locations */}
+                <div className="md:w-1/4 w-full">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">Locations</h3>
+                    <p className="text-xs sm:text-sm text-gray-400 mb-4">
                         <span className="font-bold block">KHARADI:</span> UG 06, Clover Galleria, Fountain road, Eon free zone, Kharadi, Pune.
                     </p>
-                    <p className="text-sm text-gray-400 mb-4">
+                    <p className="text-xs sm:text-sm text-gray-400 mb-4">
                         <span className="font-bold block">WAKAD:</span> Shop no. 4, Western High Street, Opp. to Zesonia Mall, Shankar Kalat Nagar, Wakad, Pimpri Chinchwad, Pune, Maharashtra - 411057.
                     </p>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-xs sm:text-sm text-gray-400">
                         <span className="font-bold block">BANER:</span> Hairderma, 601, Shirom Residency, Baner Rd, above Jyoti Appliances, Baner, Pune, Maharashtra - 411045.
                     </p>
                 </div>
             </div>
-            <div className="mt-8 text-center text-sm text-gray-500">
+
+            {/* Bottom Section */}
+            <div className="mt-6 md:mt-8 text-center text-xs sm:text-sm text-gray-500">
                 &copy; {new Date().getFullYear()} SculptDerma. All rights reserved.
             </div>
         </motion.footer>

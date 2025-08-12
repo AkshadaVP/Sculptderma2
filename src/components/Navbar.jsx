@@ -6,36 +6,42 @@ import { motion } from 'framer-motion';
 
 const Navbar = () => {
   return (
-    // The parent motion.nav will handle the fade-in from the bottom animation
     <motion.nav
       className="bg-[#1D1D1D] text-white w-full"
-      // Animation starts 20 pixels below its final position and is transparent
       initial={{ opacity: 0, y: 20 }}
-      // Animation ends at its final position and is fully visible
       animate={{ opacity: 1, y: 0 }}
-      // The animation takes 0.8 seconds and has a smooth "easeOut" effect
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       {/* Top Row */}
-      <div className="flex items-center justify-between px-8 h-20">
+      <div className="flex flex-col md:flex-row md:items-center justify-between px-4 sm:px-6 md:px-8 py-3 md:py-0">
         {/* Left: Logo and Contact */}
-        <div className="flex items-center space-x-6">
-          <img src={logo} alt="logo" className="w-16 h-16" />
-          <MdEmail className="text-xl" />
-          <FaWhatsapp className="text-xl" />
-          <span className="text-sm">+91 89836 26437</span>
+        <div className="flex flex-wrap justify-center md:justify-start items-center gap-2 sm:gap-4 md:space-x-6">
+          <img
+            src={logo}
+            alt="logo"
+            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+          />
+          <MdEmail className="text-lg sm:text-xl" />
+          <FaWhatsapp className="text-lg sm:text-xl" />
+          <span className="text-xs sm:text-sm">+91 89836 26437</span>
         </div>
-        {/* Center: Book a Consultation */}
-        <div className="flex-1 flex justify-center">
-          <span className="font-bold text-sm">EYE AESTHETICS</span>
+
+        {/* Center: Brand */}
+        <div className="mt-2 md:mt-0 flex justify-center">
+          <span className="font-bold text-xs sm:text-sm md:text-base text-center">
+            EYE AESTHETICS
+          </span>
         </div>
+
         {/* Right: Empty for spacing */}
-        <div className="w-40"></div>
+        <div className="hidden md:block w-40"></div>
       </div>
+
       {/* Divider */}
       <div className="border-t border-gray-400"></div>
+
       {/* Bottom Row: Navigation */}
-      <div className="flex justify-center space-x-12 py-2 text-sm">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-6 md:space-x-12 py-2 text-xs sm:text-sm">
         {[
           { name: 'EXPERTS', href: '#experts-section' },
           { name: 'BLOG', href: '#blog-section' },
